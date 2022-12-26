@@ -1,7 +1,7 @@
 import { Text ,StyleSheet } from "react-native"
-const SmallText = ({children,fontSize}) => {
+const SmallText = ({children,style}) => {
   return (
-   <Text style={[styles.smallText,{fontSize:fontSize}]}>{children}</Text>
+   <Text style={[styles.smallText,style]}>{children}</Text>
   )
 }
 const styles=StyleSheet.create({

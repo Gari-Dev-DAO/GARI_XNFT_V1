@@ -12,7 +12,9 @@ const styles=StyleSheet.create({
         alignItems:"center",
         width:270,
         borderWidth:2,
-        borderColor:"#FFFFFF"
+        borderColor:"#FFFFFF",
+        padding:10,
+       
     }
 })
 export default Box

@@ -1,7 +1,7 @@
 import { Text, StyleSheet } from "react-native";
 
-const Heading = ({ children,fontSize }) => {
-  return <Text style={[styles.heading,{fontSize:fontSize}]} testID='heading'> {children} </Text>;
+const Heading = ({ children,style }) => {
+  return <Text style={[styles.heading,style]} testID='heading'>{children}</Text>;
 };
 
 const styles = StyleSheet.create({
