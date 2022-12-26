@@ -9,6 +9,7 @@ module.exports = async function (env, argv) {
     return config;
   }
 
+
   config.output = {
     globalObject: 'this',
     path: __dirname + "/dist/.artifacts/",
@@ -42,6 +43,8 @@ module.exports = async function (env, argv) {
   urlLoader.use.options.limit = true;
   urlLoader.test = /\.(gif|jpe?g|png|svg|css|woff2?|eot|ttf|otf)$/;
 
+  config.resolve.alias['../Utilities/Platform'] =
+    'react-native-web/dist/exports/Platform'
   return config;
 
 };

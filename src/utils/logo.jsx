@@ -1,0 +1,1 @@
+export const logo='https://nft.chingari.io/creator.png';
