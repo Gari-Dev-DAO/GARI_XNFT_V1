@@ -1,8 +1,8 @@
 import { View,StyleSheet } from "react-native"
 
-const Box = ({children}) => {
+const Box = ({children,style}) => {
   return (
-    <View style={styles.box} testID='box'>{children}</View>
+    <View style={[styles.box,style]} testID='box'>{children}</View>
   )
 }
 const styles=StyleSheet.create({
@@ -14,6 +14,8 @@ const styles=StyleSheet.create({
         borderWidth:2,
         borderColor:"#FFFFFF",
         padding:10,
+        marginTop:4,
+        marginBottom:4
        
     }
 })

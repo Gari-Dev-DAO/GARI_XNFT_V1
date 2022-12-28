@@ -13,7 +13,10 @@ const styles=StyleSheet.create({
     borderRadius:'50%',
     borderWidth:1,
     borderColor:"#FFFFFF",
-    backgroundColor:'#745384'
+    backgroundColor:'#745384',
+    margin:'auto',
+    marginBottom:7,
+    marginTop:5
    }
 })
 export default RoundedIcon

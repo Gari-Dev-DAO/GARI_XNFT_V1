@@ -1,9 +1,12 @@
 import { ScrollView ,StyleSheet} from "react-native"
 
+
 const ResponsiveBox = ({children,style}) => {
   return (
    <ScrollView contentContainerStyle={[styles.box,style]} testID='respBox'>
+     
     {children}
+   
     </ScrollView>
   )
 }

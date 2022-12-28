@@ -7,7 +7,10 @@ const SmallText = ({children,style}) => {
 const styles=StyleSheet.create({
     smallText:{
         color:'rgba(255, 255, 255, 0.5)',
-        lineHeight:17
+        lineHeight:20,
+        fontWeight:500,
+        lineHeight:18
+        
     }
 })
 export default SmallText

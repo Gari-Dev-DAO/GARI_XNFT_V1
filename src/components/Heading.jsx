@@ -6,9 +6,10 @@ const Heading = ({ children,style }) => {
 
 const styles = StyleSheet.create({
   heading: {
-    fontWeight:500,
+    fontWeight:450,
     color:"#FFFFFF",
-    lineHeight:20
+    position:'relative',
+    lineHeight:24
   },
 });
 export default Heading;

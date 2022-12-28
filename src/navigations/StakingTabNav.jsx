@@ -20,7 +20,7 @@ const StakingTabNav = () => {
     >
         <Tab.Screen name="Stake" component={Stake} />
         <Tab.Screen name="History" component={History} />
-        <Tab.Screen name="Leaderboard" component={LeaderBoard} />
+        <Tab.Screen name="Leaderboard" component={LeaderBoard}/>
       </Tab.Navigator>
   )
 }
