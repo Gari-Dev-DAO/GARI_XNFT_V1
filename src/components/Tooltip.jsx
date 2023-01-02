@@ -15,6 +15,7 @@ const DetailTooltip = ({ text }) => {
         setOpen(false);
       }}
       popover={<Text>{text}</Text>}
+      containerStyle={{position:'relative'}}
     >
      <DetailBadge/>
     </Tooltip>

@@ -23,6 +23,6 @@ const Nft = ({route={}}) => {
 const styles=StyleSheet.create({
   nftContainer:{
    flex:1,
-   backgroundColor:'#eb34cc',
+   backgroundColor:'#8c067d',
   }})
 export default Nft;

@@ -5,7 +5,7 @@ import { useState } from "react";
 const NftVideo = ({ url, poster }) => {
   const [loading, setLoading] = useState(false);
   return (
-    <View style={{width:'100%',height:'90%'}}>
+    <View style={{width:'100%',height:'90%',position:'relative'}}>
        {loading && <View style={[styles.video,{backgroundColor:'black',zIndex:10}]}> <ActivityIndicator size="large" color="#FFFFFF" /></View>}
         <Video
           source={{
@@ -37,7 +37,12 @@ const styles = StyleSheet.create({
     width: "100%",
     borderRadius: 10,
     display:'flex',
-    justifyContent:'center'
+    justifyContent:'center',
+    position:'absolute',
+    top:0,
+    left:0,
+    right:0,
+    bottom:0
   },
 });
 export default NftVideo;

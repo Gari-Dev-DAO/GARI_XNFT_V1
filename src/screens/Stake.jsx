@@ -3,19 +3,26 @@ import UnstakeBox from '../components/Unstake'
 import StakeBox from '../components/Stake'
 import EarningBox from '../components/EarningBox'
 import Staked from '../components/Staked'
-import Heading from '../components/Heading'
+import { ScrollView ,Dimensions} from 'react-native'
+
 
 const Stake = () => {
 
 
   return (
-  <ResponsiveBox style={{backgroundColor:'#8c067d',justifyContent:'space-around',minHeight:window.innerHeight}}>
+    <ScrollView
+    contentContainerStyle={{ backgroundColor: "#8c067d", paddingTop: 20,minHeight:Dimensions.get('screen').height }}
+  >
+  <ResponsiveBox style={{backgroundColor:'#8c067d',justifyContent:'space-around'}}>
      <StakeBox/>
      <Staked/>
      <EarningBox/>
      <UnstakeBox/>
   </ResponsiveBox>
+  </ScrollView>
   )
 }
 
 export default Stake
+
+//use react native paper for badges 

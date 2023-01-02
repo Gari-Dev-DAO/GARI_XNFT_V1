@@ -5,7 +5,7 @@ import LeaderBoard from '../screens/LeaderBoard';
 import FAQs from '../screens/FAQs';
 
 const Tab = createMaterialTopTabNavigator();
-const StakingTabNav = () => {
+const HistoryTabNav = () => {
   return (
     <Tab.Navigator
     screenOptions={{
@@ -15,7 +15,7 @@ const StakingTabNav = () => {
             width: 0, height: 0 // for iOS
         }
     },
-        tabBarIndicatorStyle:{width:'25%',marginLeft:"4%"}
+        tabBarIndicatorStyle:{width:'0',height:'0'}
       }}
       tabBarStyle={{backgroundColor:'transparent'}}
     >
@@ -27,4 +27,4 @@ const StakingTabNav = () => {
   )
 }
 
-export default StakingTabNav
+export default HistoryTabNav

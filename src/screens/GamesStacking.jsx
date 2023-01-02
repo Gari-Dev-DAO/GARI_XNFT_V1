@@ -1,31 +1,29 @@
 import { useState} from "react"
-import {View,Button} from "react-native"
+import {View,Button,ScrollView,Dimensions} from "react-native"
 import { useNavigation } from "@react-navigation/native";
-import RegisterUser from "../components/RegisterUser";
 import StakeonGame from "../components/StackOnGame";
+import StakingButton from "../components/StakingButton";
 
 
 const GameStaking = ({route}) => {
 const nav=useNavigation()
 const {url}=route.params;
 const [staked,setStaked]=useState(false)  //get from api 
-const [registered,setregistered]=useState(false)  //get from api
+
 
 const navigateToGameIframe=()=>{
     nav.push("gameiframe",{url})
 }
 
   return (
-<View>
+    <ScrollView
+    contentContainerStyle={{ backgroundColor: "#8c067d", paddingTop: 20,minHeight:Dimensions.get('screen').height }}
+  >   
 {!staked && <StakeonGame setStaked={setStaked}/>}
-{staked && !registered && 
 
-<RegisterUser setregistered={setregistered} />
+{staked  &&  <StakingButton onPress={navigateToGameIframe} title="Play Now" />}
 
-}
-{staked && registered &&  <Button onPress={navigateToGameIframe} title="Play Now" />}
-
-</View>
+</ScrollView>
   )
 }
 

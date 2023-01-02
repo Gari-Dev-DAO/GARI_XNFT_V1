@@ -1,6 +1,6 @@
 import {Text,View,StyleSheet, Pressable} from 'react-native'
 import { useState } from 'react'
-import Button from './Button'
+import StakingButton from './StakingButton'
 
 const StakeonGame = ({setStaked}) => {
     const [Error,setError]=useState('')
@@ -18,7 +18,7 @@ const StakeonGame = ({setStaked}) => {
   return (
    <View style={styles.stake} >
    <Text>10 Gari</Text>
-   <Button onPress={stakeToken} title="Stake" />
+   <StakingButton onPress={stakeToken} title="Stake" />
    <Text>{Error}</Text>
    </View>
   )

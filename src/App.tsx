@@ -11,6 +11,7 @@ function App() {
     <RecoilRoot>
       <NavigationContainer>
        <MainDrawerNav/>
+       {/* <StakingTabNav></StakingTabNav> */}
       </NavigationContainer>
     </RecoilRoot>
   );

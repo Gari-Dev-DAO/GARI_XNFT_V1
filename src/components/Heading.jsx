@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
     fontWeight:450,
     color:"#FFFFFF",
     position:'relative',
-    lineHeight:24
+    lineHeight:24,
+   
   },
 });
 export default Heading;
