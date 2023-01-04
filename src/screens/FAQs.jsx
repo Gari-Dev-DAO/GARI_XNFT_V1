@@ -1,8 +1,8 @@
 import { ScrollView ,StyleSheet,Dimensions} from "react-native";
 import { Faqs } from "../utils/FAQs";
-import FAQ from "../components/FAQ";
+import FAQ from "../components/GariStaking/FAQ";
 import RoundedIcon from "../components/RoundedIcon";
-import Heading from "../components/Heading";
+import Heading from "../components/Typology/PrimaryText";
 
 const FAQs = () => {
   return (

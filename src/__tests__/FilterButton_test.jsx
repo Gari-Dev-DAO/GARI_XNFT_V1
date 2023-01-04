@@ -1,5 +1,5 @@
 import {render,screen,cleanup} from '@testing-library/react-native'
-import FilterButton from '../components/FilterButton'
+import FilterButton from '../components/vNFT/FilterButton'
 
 const mockResponse = {
     toggle:false,

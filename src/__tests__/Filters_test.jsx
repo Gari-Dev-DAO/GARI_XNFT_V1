@@ -1,5 +1,5 @@
 import {render,screen,cleanup} from '@testing-library/react-native'
-import Filters from '../components/Filters'
+import Filters from '../components/vNFT/Filters'
 
 afterEach(cleanup)
 

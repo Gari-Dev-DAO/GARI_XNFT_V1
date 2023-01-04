@@ -14,7 +14,7 @@ const styles=StyleSheet.create({
    img:{
     borderRadius:'50%',
     marginLeft:5,
-    marginRight:5
+    marginRight:5,
    }
 })
 export default GariIcon

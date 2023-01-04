@@ -1,28 +1,36 @@
-import ResponsiveBox from '../components/ResponsiveBox'
-import UnstakeBox from '../components/Unstake'
-import StakeBox from '../components/Stake'
-import EarningBox from '../components/EarningBox'
-import Staked from '../components/Staked'
-import { ScrollView ,Dimensions} from 'react-native'
+import ResponsiveBox from "../components/Containers/ResponsiveContainer";
+import UnstakeBox from "../components/GariStaking/UnstakeBox";
+import StakeBox from "../components/GariStaking/StakeBox";
+import StakingEarning from "../components/GariStaking/StakingEarning";
+import StakedData from "../components/GariStaking/StakedData";
+import { ScrollView, Dimensions,View } from "react-native";
+
+
 
 
 const Stake = () => {
 
-
   return (
     <ScrollView
-    contentContainerStyle={{ backgroundColor: "#8c067d", paddingTop: 20,minHeight:Dimensions.get('screen').height }}
-  >
-  <ResponsiveBox style={{backgroundColor:'#8c067d',justifyContent:'space-around'}}>
-     <StakeBox/>
-     <Staked/>
-     <EarningBox/>
-     <UnstakeBox/>
-  </ResponsiveBox>
-  </ScrollView>
-  )
-}
+      contentContainerStyle={{
+        backgroundColor: "#8c067d",
+        paddingTop: 20,
+        minHeight: Dimensions.get("screen").height,
+      }}
+    >
+     
+      <ResponsiveBox
+        style={{ backgroundColor: "#8c067d", justifyContent: "space-around" }}
+      >
+        <StakeBox />
+        <StakedData />
+        <StakingEarning/>
+        <UnstakeBox />
+      </ResponsiveBox>
+    </ScrollView>
+  );
+};
 
-export default Stake
+export default Stake;
 
-//use react native paper for badges 
+//use react native paper for badges

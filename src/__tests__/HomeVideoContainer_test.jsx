@@ -1,5 +1,5 @@
 import {render,screen,cleanup} from '@testing-library/react-native'
-import HomeVideoContainer from '../components/HomeVideoContainer'
+import HomeVideoContainer from '../components/vNFT/HomeVideoContainer'
 
 afterEach(cleanup)
 const mockedDispatch = jest.fn();

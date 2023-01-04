@@ -1,5 +1,5 @@
 import {View ,SafeAreaView , FlatList,ScrollView,Dimensions} from "react-native"
-import Game from "../components/Game"
+import Game from "../components/GamesStaking/Game"
 import { games } from "../utils/gamesurls"
 
 

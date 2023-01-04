@@ -1,5 +1,5 @@
 import {render,screen,cleanup} from '@testing-library/react-native'
-import AllNfts from '../components/AllNfts';
+import AllNfts from '../components/vNFT/AllNfts';
 
 afterEach(cleanup);
 

@@ -1,6 +1,6 @@
 import { render, screen, cleanup } from "@testing-library/react-native";
 import { Text } from "react-native";
-import SmallText from "../components/SmallText";
+import SmallText from "../components/Typology/SecondaryText";
 
 afterEach(cleanup);
 

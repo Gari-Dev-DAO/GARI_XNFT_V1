@@ -3,8 +3,8 @@ import {ScrollView,Dimensions} from "react-native";
 import { useAllNfts } from "../hooks/useAllNfts";
 import { useAlltraits } from "../hooks/useAllTraits";
 import { useFilters } from "../hooks/useFilters";
-import Filters from "../components/Filters";
-import AllNfts from "../components/AllNfts";
+import Filters from "../components/vNFT/Filters";
+import AllNfts from "../components/vNFT/AllNfts";
 
 
 

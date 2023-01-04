@@ -1,5 +1,5 @@
 import { render, screen, cleanup } from "@testing-library/react-native";
-import DetailButton from "../components/DetailButton";
+import DetailButton from "../components/vNFT/DetailButton";
 
 afterEach(cleanup);
 const mockedDispatch = jest.fn();

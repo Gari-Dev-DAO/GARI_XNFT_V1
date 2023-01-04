@@ -1,4 +1,4 @@
-import Button from '../components/Button';
+import Button from '../components/Buttons/Button';
 import {render,screen,cleanup, fireEvent} from '@testing-library/react-native'
 
 afterEach(cleanup);

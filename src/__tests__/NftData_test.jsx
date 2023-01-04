@@ -1,5 +1,5 @@
 import {render,screen,cleanup,fireEvent} from '@testing-library/react-native'
-import NftData from '../components/NftData'
+import NftData from '../components/vNFT/NftData'
 
 
 afterEach(cleanup)

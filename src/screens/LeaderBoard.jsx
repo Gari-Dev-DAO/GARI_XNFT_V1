@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FlatList, View, Pressable, StyleSheet,Dimensions } from "react-native";
-import ModalBox from "../components/ModalBox";
-import RankPopup from "../components/RankPopup";
+import ModalContainer from "../components/Containers/ModalContainer";
+import RankPopup from "../components/OverLayPopUps/RankPopup";
 import RoundedIcon from "../components/RoundedIcon";
-import Score from "../components/Score";
+import StakerRanking from "../components/GariStaking/StakerRanking";
 
 const LeaderBoard = () => {
   
@@ -12,7 +12,7 @@ const LeaderBoard = () => {
   const [visible,setVisible]=useState(false)
 
   const renderItem = () => {
-    return <Score />;
+    return <StakerRanking />;
   };
 
  const FlatListItemSeparator = () => {
@@ -47,7 +47,7 @@ const LeaderBoard = () => {
           <RoundedIcon dimension={72} />
        </Pressable>
        
-         <ModalBox visible={visible} setVisible={setVisible} style={{top:400}}><RankPopup/></ModalBox>
+         <ModalContainer visible={visible} setVisible={setVisible} style={{top:400}}><RankPopup/></ModalContainer>
        
       </View>
 
@@ -77,7 +77,6 @@ const styles = StyleSheet.create({
     width:'95%',
     position: "absolute",
     top: 40,
-    // height: windowHeight - 50,
     borderRadius:15,
   }
 });

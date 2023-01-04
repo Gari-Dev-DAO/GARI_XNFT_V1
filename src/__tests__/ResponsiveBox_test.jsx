@@ -1,6 +1,6 @@
 import { render, screen, cleanup } from "@testing-library/react-native";
 import { Text } from "react-native";
-import ResponsiveBox from "../components/ResponsiveBox";
+import ResponsiveBox from "../components/Containers/ResponsiveContainer";
 
 afterEach(cleanup);
 

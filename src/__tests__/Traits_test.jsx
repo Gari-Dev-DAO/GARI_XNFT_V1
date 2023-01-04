@@ -1,5 +1,5 @@
 import {render,screen,cleanup} from '@testing-library/react-native'
-import Traits from '../components/Traits'
+import Traits from '../components/vNFT/Traits'
 
 it ('renders without props',()=>{
     render(<Traits/>)

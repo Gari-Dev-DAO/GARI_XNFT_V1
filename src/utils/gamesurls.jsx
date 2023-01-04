@@ -1,7 +1,7 @@
 export const games = [
     {
       name: "Tetris1",
-      url: " http://127.0.0.1:5174/"
+      url: "http://127.0.0.1:5173/"
     },
     {
       name: "Tetris",

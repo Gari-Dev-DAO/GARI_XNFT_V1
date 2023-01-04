@@ -1,15 +1,15 @@
 import {ScrollView,Dimensions, Pressable} from "react-native";
 import { useState } from "react";
-import Withdrawal from "../components/Withdrawl";
 import ResponsiveFlatList from "../components/ResponsiveFlatList";
-import StakingHistory from "../components/StakingHistory";
-import RowBox from "../components/RowBox";
-import StakingButton from "../components/StakingButton";
+import StakingHistory from "../components/GariStaking/StakingHistory";
+import RowBox from "../components/Containers/InLineContainer";
+import WithdrawHistory from "../components/GariStaking/WithdrawHistory";
+import GradientButton from "../components/Buttons/GradientButton";
 
 const History = () => {
   const data=new Array(20)
   const renderWithdrawn = ({ item }) => {
-    return <Withdrawal/>;
+    return <WithdrawHistory/>;
   };
 
   const renderStaking=({ item }) => {
@@ -24,8 +24,8 @@ const History = () => {
     >
       <ScrollView contentContainerStyle={{ flex: 1, alignItems: "center" }}>
         <RowBox style={{width:'100%'}}>
-       <StakingButton onPress={()=>setRender(true)}  title='Staking'></StakingButton>
-       <StakingButton onPress={()=>setRender(false)} title='Withdrawn'></StakingButton>
+       <GradientButton onPress={()=>setRender(true)}  title='Staking' />
+       <GradientButton onPress={()=>setRender(false)} title='Withdrawn'/>
        </RowBox>
       {render?<ResponsiveFlatList data={data} renderItem={renderStaking}/>:
        <ResponsiveFlatList data={data} renderItem={renderWithdrawn}/> }

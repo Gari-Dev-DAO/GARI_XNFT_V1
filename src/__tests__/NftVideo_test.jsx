@@ -1,5 +1,5 @@
 import {render,screen,cleanup} from '@testing-library/react-native'
-import NftVideo from '../components/NftVideo'
+import NftVideo from '../components/vNFT/NftVideo'
 
 afterEach(cleanup)
 it ('renders correctly',()=>{

@@ -1,8 +1,8 @@
 import {StyleSheet,SafeAreaView,View} from "react-native";
-import ResponsiveBox from "../components/ResponsiveBox";
-import NftVideo from "../components/NftVideo";
-import Traits from "../components/Traits";
-import NftData from "../components/NftData";
+import ResponsiveBox from "../components/Containers/ResponsiveContainer";
+import NftVideo from "../components/vNFT/NftVideo";
+import Traits from "../components/vNFT/Traits";
+import NftData from "../components/vNFT/NftData";
 
 const Nft = ({route={}}) => {
  const {nft}=route?.params?route.params:{}

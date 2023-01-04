@@ -1,6 +1,6 @@
 import { render, screen, cleanup } from "@testing-library/react-native";
 import { Text } from "react-native";
-import Box from "../components/Box";
+import Box from "../components/Containers/Container";
 
 afterEach(cleanup);
 

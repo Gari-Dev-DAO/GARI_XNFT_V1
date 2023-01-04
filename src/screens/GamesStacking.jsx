@@ -1,8 +1,8 @@
 import { useState} from "react"
 import {View,Button,ScrollView,Dimensions} from "react-native"
 import { useNavigation } from "@react-navigation/native";
-import StakeonGame from "../components/StackOnGame";
-import StakingButton from "../components/StakingButton";
+import StakeonGame from "../components/GamesStaking/StakeOnGame";
+import StakingButton from "../components/Buttons/GradientButton";
 
 
 const GameStaking = ({route}) => {

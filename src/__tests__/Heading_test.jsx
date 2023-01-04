@@ -1,6 +1,6 @@
 import { render, screen, cleanup } from "@testing-library/react-native";
 import { Text } from "react-native";
-import Heading from "../components/Heading";
+import Heading from "../components/Typology/PrimaryText";
 
 afterEach(cleanup);
 
