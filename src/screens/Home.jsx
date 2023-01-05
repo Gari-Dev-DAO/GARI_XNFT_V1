@@ -1,5 +1,5 @@
 import { useState,createContext } from "react";
-import {ScrollView,Dimensions} from "react-native";
+import {ScrollView,Dimensions, ActivityIndicator} from "react-native";
 import { useAllNfts } from "../hooks/useAllNfts";
 import { useAlltraits } from "../hooks/useAllTraits";
 import { useFilters } from "../hooks/useFilters";
@@ -22,13 +22,13 @@ const Home = ({}) => {
 
   return (
     <ScrollView
-    contentContainerStyle={{ backgroundColor: "#8c067d", paddingTop: 20,minHeight:Dimensions.get('screen').height }}
+    contentContainerStyle={{ backgroundColor: "#8c067d", paddingTop: 20,minHeight:Dimensions.get('screen').height ,alignItems:'center'}}
   >
-      
+     
        <Provider value={[filter,setfilter]}>
        <Filters traits={traits}/>
        </Provider>
-      <AllNfts nfts={nfts} />
+       { nfts?.length>0? <AllNfts nfts={nfts} />: <ActivityIndicator style={{position:'absolute',top:100,margin:'auto'}} size='large' color='#FFFFFF'/>}
     </ScrollView>
   );
 };
