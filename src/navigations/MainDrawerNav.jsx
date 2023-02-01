@@ -3,6 +3,7 @@ import HomeStackNav from './HomeStackNav';
 import GameStackNav from './GamesStackNav';
 import StakingTabNav from './StakingTabNav';
 import PandaStaking from '../screens/PandaStaking';
+import AdminStackNav from './AdminStackNav';
 
 const Drawer = createDrawerNavigator();
 
@@ -18,6 +19,7 @@ const MainDrawerNav = () => {
         <Drawer.Screen name="Staking" component={StakingTabNav} />
         <Drawer.Screen name="Games" component={GameStackNav} />
         <Drawer.Screen name="Panda Staking" component={PandaStaking}/>
+        <Drawer.Screen name="Admin" component={AdminStackNav}/>
       </Drawer.Navigator>
   )
 }

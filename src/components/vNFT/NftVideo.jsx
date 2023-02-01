@@ -13,6 +13,7 @@ const NftVideo = ({ url, poster }) => {
           }}
           onLoadStart={() => setLoading(true)}
           onLoad={(videoData)=>{setLoading(false)
+            if(videoData.path)
             videoData.path[0].style.position = "initial";
           }}
           posterSource={{ uri: poster }}
@@ -22,7 +23,10 @@ const NftVideo = ({ url, poster }) => {
           resizeMode="contain"
           isLooping
           onReadyForDisplay={(videoData) => {
-            videoData.path[0].style.zIndex = 2;
+                if(videoData.path){
+                 videoData.path[0].style.zIndex = 2; 
+                 videoData.path[0].style.position = "initial";
+                }
           }}
           usePoster
           testID="video"
@@ -33,10 +37,10 @@ const NftVideo = ({ url, poster }) => {
 
 const styles = StyleSheet.create({
   video: {
+    flex:1,
     height: "100%",
     width: "100%",
     borderRadius: 10,
-    display:'flex',
     justifyContent:'center',
     position:'absolute',
     top:0,

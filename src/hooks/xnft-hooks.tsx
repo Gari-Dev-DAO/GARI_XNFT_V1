@@ -24,27 +24,30 @@ export function usePublicKey(): PublicKey {
 }
 
 export function usePublicKeys(): PublicKey {
-  const [publicKeys, setPublicKeys] = useState(window.xnft.publicKeys);
+  const launched=useDidLaunch()
+  const [publicKeys, setPublicKeys] = useState(window?.xnft?.publicKeys);
   useEffect(() => {
-    window.xnft.on("publicKeysUpdate", () => {
-      setPublicKeys(window.xnft.publicKeys);
+    window?.xnft?.on("publicKeysUpdate", () => {
+      setPublicKeys(window?.xnft?.publicKeys);
     });
-  }, [setPublicKeys]);
+  }, [setPublicKeys,launched]);
   return publicKeys;
 }
 
 /*
  * @Depreciated over individual connections
  */
+
 export function useConnection(): Connection {
-  const [connection, setConnection] = useState(window.xnft.solana?.connection);
+  const [connection, setConnection] = useState(window?.xnft?.solana?.connection);
   useEffect(() => {
-    window.xnft.solana?.on("connectionUpdate", () => {
-      setConnection(window.xnft.solana.connection);
+    window?.xnft?.solana?.on("connectionUpdate", () => {
+      setConnection(window?.xnft?.solana?.connection);
     });
   }, [setConnection]);
   return connection;
 }
+
 
 export function useSolanaConnection(): Connection {
   const [connection, setConnection] = useState(window.xnft.solana?.connection);

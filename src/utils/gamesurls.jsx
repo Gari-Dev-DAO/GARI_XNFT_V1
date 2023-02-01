@@ -4,10 +4,6 @@ export const games = [
       url: "http://127.0.0.1:5173/"
     },
     {
-      name: "Tetris",
-      url: "https://mimstris.onrender.com/",
-    },
-    {
       name: "Star-Battel",
       url: "https://4ark.me/star-battle/",
     },

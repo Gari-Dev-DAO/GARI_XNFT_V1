@@ -10,6 +10,15 @@ module.exports = async function (env, argv) {
     type: 'javascript/auto',
 })
 
+config.module.rules.push( {
+  test: /postMock.html$/,
+  use: {
+    loader: 'file-loader',
+    options: {
+      name: '[name].[ext]',
+    },
+  }})
+
 const r = JSON.parse(JSON.stringify(config.module.rules[1].oneOf[2]))
 
 r.include = /node_modules/
@@ -59,6 +68,10 @@ config.module.rules[1].oneOf.push(r)
 
   config.resolve.alias['../Utilities/Platform'] =
     'react-native-web/dist/exports/Platform'
+    config.resolve.alias['react-native'] =
+    'react-native-web'  //changed
+    config.resolve.alias['react-native-webview'] =
+    'react-native-web-webview' //changed
   return config;
 
 };
