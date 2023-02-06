@@ -8,12 +8,13 @@ import SecondaryText from '../Typology/SecondaryText'
 import { createPlayer } from '../../services/GameDBApis'
 import { usePublicKey } from '../../hooks/xnft-hooks'
 
-const StakeonGame = ({ setIsBetted }) => {
+const StakeonGame = ({ setIsBetted,setLoading }) => {
 
   const publicKey = usePublicKey()
   const [Error, setError] = useState('')
 
   const BetToken = async () => {
+    setLoading(true)
     if (window.xnft?.publicKey) {
       const status = await BetOnTheGame() //on chain betting
       if (status == 'success') {
@@ -28,6 +29,7 @@ const StakeonGame = ({ setIsBetted }) => {
     else {
       setError('Plz Wait')
     }
+    setLoading(false)
   }
 
   return (

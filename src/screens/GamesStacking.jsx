@@ -51,7 +51,7 @@ useEffect(()=>{
   >
 {isLoading && <Loading/>}
 <Text>Thanks For Playing The Game</Text>
-<OverLay visible={isOverLayVisible && !isBetted && !isLoading} setVisible={setOverLayVisible}><StakeonGame setIsBetted={setIsBetted} /> </OverLay>
+<OverLay visible={isOverLayVisible && !isBetted && !isLoading} setVisible={setOverLayVisible}><StakeonGame setIsBetted={setIsBetted} setLoading={setLoading}/> </OverLay>
 <OverLay visible={isOverLayVisible && isBetted && !isLoading} setVisible={setOverLayVisible}><GradientButton title={"Play Now"} onPress={navigateToGameIframe}/> </OverLay>
 </ScrollView>
   )
