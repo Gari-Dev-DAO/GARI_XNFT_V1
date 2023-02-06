@@ -1,7 +1,7 @@
 export const games = [
     {
       name: "Tetris1",
-      url: "http://127.0.0.1:5173/"
+      url: "https://tetris-game-weld.vercel.app/"
     },
     {
       name: "Star-Battel",

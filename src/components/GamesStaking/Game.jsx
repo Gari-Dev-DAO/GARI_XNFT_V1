@@ -8,7 +8,7 @@ const nav=useNavigation()
 const {name,url}=game;
 
 const navigateToGameIframe=()=>{
-    nav.push("gameiframe",{url})
+    nav.push("gameiframe",{url,free:true})
 }
 
 const navigateToStaking=()=>{

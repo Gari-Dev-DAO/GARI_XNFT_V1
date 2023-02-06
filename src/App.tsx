@@ -8,17 +8,17 @@ import PandaStaking from "./screens/PandaStaking";
 import { LinearGradient } from "expo-linear-gradient";
 import GameStackNav from "./navigations/GamesStackNav";
 import GameIframe from "./screens/GameIframe";
-import ConnectionPoc from "./screens/ConnectionPoc";
+ import ConnectionPoc from "./screens/ConnectionPoc";
 
 function App() {
   return (
     <RecoilRoot>
       <NavigationContainer>
        {/* <MainDrawerNav/>  */}
-        {/* <StakingTabNav/> */}
-        {/* <PandaStaking/> */}
-       {/* <GameStackNav/> */}
-       <ConnectionPoc/>
+         {/* <StakingTabNav/> */}
+        {/* <PandaStaking/>   */}
+        <GameStackNav/> 
+       {/* <ConnectionPoc/> */}
       </NavigationContainer> 
     </RecoilRoot>
   );
@@ -26,3 +26,5 @@ function App() {
 
 
 export default registerRootComponent(App);
+//start game , end game , bet on game (fetch user data if betted than direcly to play)
+//game loading while data fetching via db 

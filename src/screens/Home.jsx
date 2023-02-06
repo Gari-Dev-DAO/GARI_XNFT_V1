@@ -7,8 +7,6 @@ import Filters from "../components/vNFT/Filters";
 import AllNfts from "../components/vNFT/AllNfts";
 
 
-
-
 export const filterContex=createContext()
 const {Provider}=filterContex;
 
@@ -24,7 +22,6 @@ const Home = ({}) => {
     <ScrollView
     contentContainerStyle={{ backgroundColor: "#8c067d", paddingTop: 20,minHeight:Dimensions.get('screen').height ,alignItems:'center'}}
   >
-     
        <Provider value={[filter,setfilter]}>
        <Filters traits={traits}/>
        </Provider>
