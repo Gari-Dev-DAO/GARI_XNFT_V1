@@ -5,21 +5,29 @@ import PrimaryText from '../Typology/PrimaryText'
 import RoundedIcon from '../RoundedIcon'
 import { BetOnTheGame } from '../../services/GameProgramApis'
 import SecondaryText from '../Typology/SecondaryText'
-import { createPlayer } from '../../services/GameDBApis'
+import { addPlayer } from '../../services/GameDBApis'
 import { usePublicKey } from '../../hooks/xnft-hooks'
+import { getLiveGame } from '../../services/GameDBApis'
 
-const StakeonGame = ({ setIsBetted,setLoading }) => {
+const StakeonGame = ({ setIsBetted,setLoading ,gameID}) => {
 
   const publicKey = usePublicKey()
   const [Error, setError] = useState('')
 
   const BetToken = async () => {
     setLoading(true)
-    if (window.xnft?.publicKey) {
+    if (publicKey) {
       const status = await BetOnTheGame() //on chain betting
       if (status == 'success') {
-       const res= await createPlayer({ walletID: publicKey }) //send data to db
-       if(res=='success')
+        const gameInstanceID=await getLiveGame({gameID})
+        if(gameInstanceID=='error')
+        {
+          setError('Some Error')
+          setLoading(false)
+          return
+        }
+       const player= await addPlayer({ publicKey,gameID,gameInstanceID }) //send data to db
+       if(player && !player.msg)
         setIsBetted(true)
         else
         setError('Some Problem With db')

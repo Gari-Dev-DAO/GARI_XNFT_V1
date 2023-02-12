@@ -5,13 +5,13 @@ import StakeonGame from "../components/GamesStaking/StakeOnGame";
 import GradientButton from "../components/Buttons/GradientButton";
 import OverLay from "../components/OverLay";
 import { usePublicKey } from "../hooks/xnftConnection/hooks";
-import { getPlayer } from "../services/GameDBApis";
+import { getLiveGame, getPlayer } from "../services/GameDBApis";
 import Loading from "../components/Loading";
 
 
 const GameStaking = ({route}) => {
 const nav=useNavigation()
-const {url}=route.params;
+const {url,gameID}=route.params;
 const publicKey=usePublicKey()
 const [isBetted,setIsBetted]=useState(false) //get from api 
 const [isLoading,setLoading]=useState(true)
@@ -19,8 +19,11 @@ const [isLoading,setLoading]=useState(true)
 
 const getUserBettingData=async()=>{
   setLoading(true)
-  const status=await getPlayer({walletID:publicKey})
-  if(status=='User Data Found' )
+  const gameInstanceID=await getLiveGame({gameID})
+  if(gameInstanceID=='error')
+  return
+  const player=await getPlayer({publicKey,gameID,gameInstanceID})
+  if(player && player!='error' && player.msg!="Player Not Found")
   setIsBetted(true)
   setLoading(false)
 }
@@ -51,7 +54,7 @@ useEffect(()=>{
   >
 {isLoading && <Loading/>}
 <Text>Thanks For Playing The Game</Text>
-<OverLay visible={isOverLayVisible && !isBetted && !isLoading} setVisible={setOverLayVisible}><StakeonGame setIsBetted={setIsBetted} setLoading={setLoading}/> </OverLay>
+<OverLay visible={isOverLayVisible && !isBetted && !isLoading} setVisible={setOverLayVisible}><StakeonGame setIsBetted={setIsBetted} setLoading={setLoading} gameID={gameID}/> </OverLay>
 <OverLay visible={isOverLayVisible && isBetted && !isLoading} setVisible={setOverLayVisible}><GradientButton title={"Play Now"} onPress={navigateToGameIframe}/> </OverLay>
 </ScrollView>
   )

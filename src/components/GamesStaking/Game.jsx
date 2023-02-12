@@ -5,14 +5,14 @@ import PrimaryText from '../Typology/PrimaryText';
 
 const Game = ({game}) => {
 const nav=useNavigation()
-const {name,url}=game;
+const {name,url,gameID}=game;
 
 const navigateToGameIframe=()=>{
     nav.push("gameiframe",{url,free:true})
 }
 
 const navigateToStaking=()=>{
-  nav.push("gamestaking",{url})
+  nav.push("gamestaking",{url,gameID})
 }
 
   return (

@@ -1,28 +1,50 @@
 import axios from "axios";
-const url='https://betting-game.onrender.com/player'
+const url='https://games-backend.vercel.app/api'
 
-export const createPlayer=async({walletID})=>{
-   try{
-    const res=await axios.post(`${url}/`,{walletID})
-    // return res.data
-    return 'success'
-   }
-   catch(err)
-   {
-    console.log(err)
-    return 'error'
-   }
-}
 
-export const getPlayer=async({walletID})=>{
+const Error='error'
+
+export const getLiveGame=async({gameID})=>{
     try{
-        const res=await axios.get(`${url}/${walletID}`)
-        if(res.data?.walletID)
-        return "User Data Found"
+      const params = new URLSearchParams({
+          gameID
+      })
+       const res=await axios.get(`${url}/getLiveGame?${params}`)
+       return res.data
     }
     catch(err)
     {
-        console.log(err)
-        return 'error'
+      return Error
+    }
+  }
+
+
+  export const getPlayer=async({publicKey,gameID,gameInstanceID})=>{
+    try{
+        const params = new URLSearchParams({
+            publicKey,
+            gameID,
+            gameInstanceID
+        })
+        const res=await axios.get(`${url}/getPlayer?${params}`)
+        return res.data;
+    }
+    catch(err)
+    {
+       return Error
+    }
+}
+
+
+
+export const addPlayer=async({gameID,gameInstanceID,publicKey})=>{
+    try{
+        const res=await axios.post(`${url}/addPlayer`,{gameID,gameInstanceID,publicKey})
+        console.log(res.data.msg)
+        return res.data
+    }
+    catch(err)
+    {
+       return Error
     }
 }

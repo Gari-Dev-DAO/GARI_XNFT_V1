@@ -1,24 +1,28 @@
 export const games = [
     {
-      name: "Tetris1",
-      url : 'http://127.0.0.1:5173/'
-      // url: "https://tetris-game-weld.vercel.app/"
+      name: "Tetris",
+      url: "https://tetris-game-weld.vercel.app/",
+      gameID:1
     },
     {
-      name: "Star-Battel",
-      url: "https://4ark.me/star-battle/",
+      name: "Snake",
+      url: "https://snake.remiboissise.com/",
+      gameID:2
     },
     {
       name: "Tick-Tack-Toe",
       url: "https://amiryy.github.io/tic-tac-toe-react-redux/#/game",
+      gameID:3
     },
     {
       name: "Animal Memory",
       url: "https://zanderlx21.github.io/Animal-Memory-Match/",
+      gameID:4
     },
     {
       name: "Sudoku",
       url: "https://huaminghuangtw.github.io/Web-Sudoku-Puzzle-Game/",
+      gameID:5
     },
   ];
   
