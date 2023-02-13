@@ -6,7 +6,7 @@ export const games = [
     },
     {
       name: "Snake",
-      url: "https://snake.remiboissise.com/",
+      url: "https://snake-game-ravikant333.vercel.app/",
       gameID:2
     },
     {
