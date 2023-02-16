@@ -1,22 +1,23 @@
-import { useNavigation } from '@react-navigation/native';
 import Button from '../Buttons/Button';
-import Box from '../Containers/Container';
 import RowBox from '../Containers/InLineContainer';
 import GameBtn from '../gradients/GameBtn';
 import PrimaryText from '../Typology/PrimaryText';
+import Box from '../Containers/Container';
 import { Image } from 'react-native';
 
+
 const Game = ({game}) => {
-const nav=useNavigation()
-const {gameName,gameUrl,gameID,gameImage}=game;
 
+const {gameName,gameID,gameImage}=game;
 
-const navigateToGameIframe=()=>{
-    nav.push("gameiframe",{gameUrl,free:true})
+const startGame=async()=>{
+    //create game-campaign fn of blockchain
+    //start new game api of backend
 }
-
-const navigateToStaking=()=>{
-  nav.push("gamestaking",{gameUrl,gameID})
+const endGame=async()=>{
+    //get winner   (db)
+    //end game-cmpgn (blockchain)
+    //select winner  (blockchain)
 }
 
   return (
@@ -27,8 +28,8 @@ const navigateToStaking=()=>{
       />
     <PrimaryText style={{fontSize:18, lineHeight:40}}>{gameName}</PrimaryText>
     <RowBox style={{gap:'10px'}}>
-    <Button onPress={navigateToGameIframe}  title="Play For Free" />
-    <GameBtn onPress={navigateToStaking}  title="Play To Earn" />
+    <Button onPress={startGame}  title="Start Game" />
+    <GameBtn onPress={endGame}  title="End Game" />
     </RowBox>
     </Box>
   )

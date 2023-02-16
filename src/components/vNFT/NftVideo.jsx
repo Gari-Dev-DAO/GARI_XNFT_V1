@@ -1,19 +1,20 @@
 import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { Video } from "expo-av";
 import { useState } from "react";
+import * as React from "react";
+
 
 const NftVideo = ({ url, poster }) => {
   const [loading, setLoading] = useState(false);
   return (
     <View style={{width:'100%',height:'90%',position:'relative'}}>
-       {loading && <View style={[styles.video,{backgroundColor:'black',zIndex:10}]}> <ActivityIndicator size="large" color="#FFFFFF" /></View>}
+       {/* {loading && <View style={[styles.video,{backgroundColor:'black',zIndex:10}]}> <ActivityIndicator size="large" color="#FFFFFF" /></View>}
         <Video
           source={{
             uri: url,
           }}
           onLoadStart={() => setLoading(true)}
           onLoad={(videoData)=>{setLoading(false)
-            if(videoData.path)
             videoData.path[0].style.position = "initial";
           }}
           posterSource={{ uri: poster }}
@@ -23,14 +24,15 @@ const NftVideo = ({ url, poster }) => {
           resizeMode="contain"
           isLooping
           onReadyForDisplay={(videoData) => {
-                if(videoData.path){
-                 videoData.path[0].style.zIndex = 2; 
-                 videoData.path[0].style.position = "initial";
-                }
+            videoData.path[0].style.zIndex = 2;
           }}
           usePoster
           testID="video"
-        />
+        /> */}
+        <video  controls style={{height:'450px',width:'280px'}} poster={poster}>
+       <source src={url} type="video/mp4"/>
+      </video>
+
         </View>
   );
 };

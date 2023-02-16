@@ -1,5 +1,5 @@
 import {useNavigation } from "@react-navigation/native";
-import Button from "../Buttons/Button";
+import GameBtn from "../gradients/GameBtn";
 
 const DetailButton = ({ nft }) => {
   const navigation = useNavigation();
@@ -7,7 +7,7 @@ const DetailButton = ({ nft }) => {
     navigation.navigate("Nft", { nft });
   };
   return (
-  <Button onPress={navigateToNft} title="Detail"/>
+  <GameBtn onPress={navigateToNft} title="Detail"/>
   )
 };
 

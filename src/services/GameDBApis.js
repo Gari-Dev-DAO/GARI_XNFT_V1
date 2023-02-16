@@ -48,3 +48,27 @@ export const addPlayer=async({gameID,gameInstanceID,publicKey})=>{
        return Error
     }
 }
+
+export const addNewGame=async({gameName,gameUrl,gameImage})=>{
+    try{
+        const res=await axios.post(`${url}/addNewGame`,{gameName,gameUrl,gameImage})
+        
+        return res.data
+    }
+    catch(err)
+    {
+       return Error
+    }
+}
+
+export const getAllGames=async()=>{
+    try{
+        const res=await axios.get(`${url}/getAllGames`)
+        console.log(res.data);
+        return res.data
+    }
+    catch(err)
+    {
+       return Error
+    }
+}

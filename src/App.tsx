@@ -1,24 +1,32 @@
 import { registerRootComponent } from "expo";
 import { RecoilRoot } from "recoil";
 import { NavigationContainer } from "@react-navigation/native";
-import MainDrawerNav from "./navigations/MainDrawerNav";
 import StakingTabNav from "./navigations/StakingTabNav";
 import PandaStaking from "./screens/PandaStaking";
-
-import { LinearGradient } from "expo-linear-gradient";
 import GameStackNav from "./navigations/GamesStackNav";
-import GameIframe from "./screens/GameIframe";
  import ConnectionPoc from "./screens/ConnectionPoc";
-
+import AdminPanel from "./screens/AdminPanel";
+import AdminStackNav from "./navigations/AdminStackNav";
+import { RootSiblingParent } from 'react-native-root-siblings';
+import HomeStackNav from "./navigations/HomeStackNav";
+import MainTabNav from "./navigations/MainTabNav";
 function App() {
   return (
     <RecoilRoot>
       <NavigationContainer>
-       {/* <MainDrawerNav/>  */}
-         {/* <StakingTabNav/> */}
-        {/* <PandaStaking/>   */}
-        <GameStackNav/> 
-       {/* <ConnectionPoc/> */}
+        <RootSiblingParent>
+    {/* <MainDrawerNav/>    */}
+         {/* <StakingTabNav/>
+        <PandaStaking/>  
+       
+        // <ConnectionPoc/>
+        */}
+        {/* <GameStackNav/>  */}
+        {/* <AdminStackNav/> */}
+        {/* <ConnectionPoc/> */}
+        {/* <HomeStackNav/> */}
+        <MainTabNav/>
+       </RootSiblingParent>
       </NavigationContainer> 
     </RecoilRoot>
   );

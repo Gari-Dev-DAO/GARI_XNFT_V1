@@ -1,13 +1,13 @@
 import { useState ,useEffect} from "react"
 import {SafeAreaView , FlatList,ScrollView,Dimensions} from "react-native"
-import Game from "../components/GamesStaking/Game"
-import { getAllGames } from "../services/GameDBApis"
-import PrimaryText from "../components/Typology/PrimaryText"
-import ScreenConatainer from "../components/gradients/ScreenConatiner"
+import Game from "./Game";
+import ScreenConatainer from "../gradients/ScreenConatiner";
+import { getAllGames } from "../../services/GameDBApis";
+import PrimaryText from "../Typology/PrimaryText";
 import Toast from 'react-native-root-toast';
 import { ActivityIndicator } from "react-native"
 
-const Games = () => {
+const StartGame = () => {
   const [games,setGames]=useState([])
   const[isLoading,setLoading]=useState(true)
 
@@ -49,4 +49,4 @@ const Games = () => {
   )
 }
 
-export default Games
+export default StartGame

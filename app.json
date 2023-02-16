@@ -2,6 +2,14 @@
   "expo": {
     "name": "react-native-vnft",
     "slug": "react-native-vnft",
-    "entryPoint": "./src/App"
+    "entryPoint": "./src/App",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ]
   }
 }

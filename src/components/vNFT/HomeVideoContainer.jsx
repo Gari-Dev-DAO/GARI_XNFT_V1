@@ -17,7 +17,9 @@ const styles=StyleSheet.create({
      flexDirection:"column",
      alignItems:"center",
      width:300,
-     height:500
+     height:500,
+     gap:15,
+     marginBottom:15
     }
   })
   

@@ -68,10 +68,9 @@ config.module.rules[1].oneOf.push(r)
 
   config.resolve.alias['../Utilities/Platform'] =
     'react-native-web/dist/exports/Platform'
-    config.resolve.alias['react-native'] =
-    'react-native-web'  //changed
-    config.resolve.alias['react-native-webview'] =
-    'react-native-web-webview' //changed
+   
+
+    
   return config;
 
 };

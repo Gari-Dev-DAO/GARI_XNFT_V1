@@ -15,8 +15,7 @@ const styles=StyleSheet.create({
         borderColor:"#FFFFFF",
         padding:10,
         marginTop:4,
-        marginBottom:4
-       
+        marginBottom:4,
     }
 })
 export default Box
