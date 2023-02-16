@@ -4,7 +4,7 @@ import PrimaryText from '../Typology/PrimaryText'
 import { BetOnTheGame } from '../../services/GameProgramApis'
 import SecondaryText from '../Typology/SecondaryText'
 import { addPlayer } from '../../services/GameDBApis'
-import { usePublicKey } from '../../hooks/xnft-hooks'
+import { usePublicKey } from '../../hooks/xnftConnection/hooks'
 import { getLiveGame } from '../../services/GameDBApis'
 import GameBtn from '../gradients/GameBtn'
 

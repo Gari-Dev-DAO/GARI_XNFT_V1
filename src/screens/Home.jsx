@@ -1,34 +1,38 @@
-import { useState,createContext } from "react";
-import {ScrollView,Dimensions, ActivityIndicator} from "react-native";
+import {  createContext } from "react";
+import { ScrollView, Dimensions, ActivityIndicator } from "react-native";
 import { useAllNfts } from "../hooks/useAllNfts";
 import { useAlltraits } from "../hooks/useAllTraits";
-import { useFilters } from "../hooks/useFilters";
-import Filters from "../components/vNFT/Filters";
 import AllNfts from "../components/vNFT/AllNfts";
 import ScreenConatainer from "../components/gradients/ScreenConatiner";
+import PrimaryText from "../components/Typology/PrimaryText";
 
 
-export const filterContex=createContext()
-const {Provider}=filterContex;
+export const filterContex = createContext()
 
-const Home = ({}) => {
 
-   let nfts = useAllNfts();
-   const traits=useAlltraits(nfts);
-   const [filter,setfilter]=useState(['All'])
-   nfts=useFilters(nfts,filter)
-   
+const Home = ({ }) => {
+
+  let nfts = useAllNfts();
+  const { traits, languages } = useAlltraits(nfts);
+  //  const [filter,setfilter]=useState(['All'])
+  //  nfts=useFilters(nfts,filter)
+  //  use two filters here..language and otherone as nft.
+
 
   return (
     <ScrollView
-    contentContainerStyle={{minHeight:Dimensions.get('screen').height ,alignItems:'center'}}
-  >
-    <ScreenConatainer>
-       <Provider value={[filter,setfilter]}>
-       <Filters traits={traits}/>
-       </Provider>
-       { nfts?.length>0? <AllNfts nfts={nfts} />: <ActivityIndicator style={{position:'absolute',top:100,margin:'auto',left:'45%'}} size='large' color='#FFFFFF' />}
-       </ScreenConatainer>
+      contentContainerStyle={{ minHeight: Dimensions.get('screen').height, alignItems: 'center' }}
+    >
+      <ScreenConatainer>
+        {nfts?.length > 0 ?
+        <ScrollView  contentContainerStyle={{ alignItems: 'center' }}>
+           <PrimaryText style={{ fontSize: 32, color: 'white', margin: 'auto', lineHeight: 70 }}>vNfts</PrimaryText>
+           {/* filter language */}
+            {/* filter Category */}
+           <AllNfts nfts={nfts} />
+           </ScrollView>
+          : <ActivityIndicator style={{ position: 'absolute', top: 100, margin: 'auto', left: '45%' }} size='large' color='#FFFFFF' />}
+      </ScreenConatainer>
     </ScrollView>
   );
 };

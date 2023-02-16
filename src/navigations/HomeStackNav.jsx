@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../screens/Home';
 import Nft from '../screens/Nft';
+import Iframe from '../screens/Ifame';
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,7 @@ const HomeStackNav=()=> {
       <Stack.Screen name="Home" component={Home} options={{
       headerShown: false }}/>
       <Stack.Screen name="Nft" component={Nft} />
+      <Stack.Screen name="Nft-Details" component={Iframe} />
     </Stack.Navigator>
   );
 }

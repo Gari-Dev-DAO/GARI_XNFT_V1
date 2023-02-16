@@ -1,8 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeStackNav from './HomeStackNav';
 import GameStackNav from './GamesStackNav';
-import StakingTabNav from './StakingTabNav';
-import PandaStaking from '../screens/PandaStaking';
 import AdminStackNav from './AdminStackNav';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
