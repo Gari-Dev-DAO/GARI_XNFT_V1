@@ -19,7 +19,7 @@ export const useAlltraits = (nfts=[]) => {
   useEffect(() => {
     const traits = new Set();
     const languages = new Set();
-    nfts.map((nft) => {
+    nfts?.map((nft) => {
       addTraits(traits, nft,languages);
       return nft;
     });

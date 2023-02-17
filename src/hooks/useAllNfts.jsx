@@ -10,7 +10,7 @@ export const useAllNfts = () => {
   useMoralis()
   useEffect(() => {
     const getNfts = async() => {
-      let nfts = mintAddresses.map(async (mintAddress) => {
+      let nfts = mintAddresses?.map(async (mintAddress) => {
          const metaData= await getNFTMetadata(mintAddress)
          const {metadataUri}=metaData?.metaplex
          let arweaveData= await getArweaveData(metadataUri)
@@ -23,5 +23,7 @@ export const useAllNfts = () => {
     getNfts();
   }, []);
 
-  return useMemo(() =>nfts, [nfts]);
+  return useMemo(() =>{
+    return  nfts?.length==0?null:nfts
+  }, [nfts]);
 };

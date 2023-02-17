@@ -1,5 +1,5 @@
 import { View, StyleSheet, Text, Image } from 'react-native'
-import { useState } from 'react'
+import Toast from 'react-native-root-toast';
 import PrimaryText from '../Typology/PrimaryText'
 import { BetOnTheGame } from '../../services/GameProgramApis'
 import SecondaryText from '../Typology/SecondaryText'
@@ -12,7 +12,7 @@ import GameBtn from '../gradients/GameBtn'
 const StakeonGame = ({ setIsBetted, setLoading, gameID }) => {
 
   const publicKey = usePublicKey()
-  const [Error, setError] = useState('')
+  
 
   const BetToken = async () => {
     setLoading(true)
@@ -46,7 +46,7 @@ const StakeonGame = ({ setIsBetted, setLoading, gameID }) => {
       }
     }
     else {
-      Toast.show('Can not get PubKey!!.', {
+      Toast.show('Can not get PubKey!.', {
         duration: Toast.durations.LONG,
         backgroundColor:'red'
       });

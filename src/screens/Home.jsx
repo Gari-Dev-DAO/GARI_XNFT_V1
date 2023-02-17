@@ -8,14 +8,15 @@ import PrimaryText from "../components/Typology/PrimaryText";
 import CategoryFilter from "../components/vNFT/CategoryFilter";
 import LanguageFilter from "../components/vNFT/LanguageFilter";
 import { useFilters } from "../hooks/useFilters";
+import RowBox from "../components/Containers/InLineContainer";
 
 
 export const filterContex = createContext()
 
 
-const Home = ({ }) => {
-
-  let nfts = useAllNfts();
+const Home = () => {
+  let nfts =null
+  nfts= useAllNfts();
   const { traits, languages } = useAlltraits(nfts);
  
   const [languageFilter,setLanguageFilter]=useState('All Languages')
@@ -28,12 +29,17 @@ const Home = ({ }) => {
       contentContainerStyle={{ minHeight: Dimensions.get('screen').height, alignItems: 'center' }}
     >
       <ScreenConatainer>
-        {nfts?.length > 0 ?
+        {nfts!=null ?
         <ScrollView  contentContainerStyle={{ alignItems: 'center' ,paddingTop:200}}>
            <PrimaryText style={{ fontSize: 32, color: 'white', margin: 'auto', lineHeight: 70,position:'absolute',top:30 }}>vNfts</PrimaryText>
+          
            <CategoryFilter traits={traits} setCatgFilter={setCatgFilter}/>
            <LanguageFilter languages={languages} setLanguageFilter={setLanguageFilter}/>
+          
+           {nfts?.length==0?
+           <PrimaryText style={{fontSize:20}}>NO NFT FOUND!</PrimaryText>:
            <AllNfts nfts={nfts} />
+        }
            </ScrollView>
           : <ActivityIndicator style={{ position: 'absolute', top: 100, margin: 'auto', left: '45%' }} size='large' color='#FFFFFF' />}
       </ScreenConatainer>

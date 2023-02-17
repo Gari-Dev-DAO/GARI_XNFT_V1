@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { ScrollView, Dimensions, Text } from "react-native"
 import { useNavigation } from "@react-navigation/native";
 import StakeonGame from "../components/GamesStaking/StakeOnGame";
-import GradientButton from "../components/Buttons/GradientButton";
 import OverLay from "../components/OverLay";
 import { usePublicKey } from "../hooks/xnftConnection/hooks";
 import { getLiveGame, getPlayer } from "../services/GameDBApis";

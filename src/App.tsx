@@ -21,7 +21,7 @@ export default registerRootComponent(App);
 
 
 //TODO 
-//1) Filter Based On Language and Category (high priority)
-//2) Iframe Loading Screen (high priority)
-//3) Site Reliability (high priotity but at last)
-//4) React games Reloading (least one)
+
+//4) React games Loading 
+//5) Program Integration
+//6) Making Game Look Good and Test Interface
