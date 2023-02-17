@@ -72,3 +72,27 @@ export const getAllGames=async()=>{
        return Error
     }
 }
+
+export const getAllAdmins=async()=>{
+    try{
+     
+       const res=await axios.get(`${url}/getAllAdmins`)
+       return res.data[0].admins
+    }
+    catch(err)
+    {
+      return Error
+    }
+  }
+
+  export const addNewAdmin=async({gameAdmin})=>{
+    try{
+        const res=await axios.patch(`${url}/updateGameAdmins`,{gameAdmin})
+        
+        return res.data
+    }
+    catch(err)
+    {
+       return Error
+    }
+}

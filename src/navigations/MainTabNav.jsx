@@ -4,10 +4,37 @@ import GameStackNav from './GamesStackNav';
 import AdminStackNav from './AdminStackNav';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
+import { usePublicKey } from '../hooks/xnftConnection/hooks';
+import { getAllAdmins } from '../services/GameDBApis';
+import { useState,useEffect } from 'react';
 
 const Tab = createBottomTabNavigator();
 
 const MainTabNav = () => {
+  const publicKey=usePublicKey()
+ 
+  const [isValidAdmin,setValidAdmin]=useState(false)
+ 
+
+  const getAndCheckAdmin=async()=>{
+    const admins=await getAllAdmins()
+    if(admins && admins!='error')
+   {
+    const data=admins.find((admin)=>{
+      return (admin==publicKey)
+    })
+    if (data) setValidAdmin(true)
+   }
+
+  }
+
+ 
+  useEffect(() => {
+   getAndCheckAdmin()
+  
+  }, [publicKey])
+
+  
   return (
     <Tab.Navigator
     initialRouteName="Home"
@@ -38,6 +65,7 @@ const MainTabNav = () => {
         headerShown: false
       }}
     />
+    { isValidAdmin &&
     <Tab.Screen
       name="Admin"
       component={AdminStackNav}
@@ -48,8 +76,7 @@ const MainTabNav = () => {
         ),
         headerShown: false
       }}
-      
-    />
+    /> }
   </Tab.Navigator>
   )
 }

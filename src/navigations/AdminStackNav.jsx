@@ -2,6 +2,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AdminPanel from '../screens/AdminPanel';
 import AddGame from '../components/AdminPanel/AddGame';
 import StartGame from '../components/AdminPanel/StartGame';
+import AddAdmin from '../components/AdminPanel/AddAdmin';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ const AdminStackNav=()=> {
       headerShown: false }}/>
      <Stack.Screen name={"add-game"} component={AddGame} />
      <Stack.Screen name={"start-game"} component={StartGame} />
+     <Stack.Screen name={"add-admin"} component={AddAdmin} />
     </Stack.Navigator>
   );
 }

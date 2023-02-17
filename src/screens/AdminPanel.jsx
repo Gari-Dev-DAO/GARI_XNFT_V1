@@ -13,6 +13,9 @@ const AdminPanel = () => {
    const navigateToStartGame=()=>{
     nav.push('start-game')
    }
+   const navigateToAddAdmin=()=>{
+    nav.push('add-admin')
+   }
 
     return (
         <ScrollView
@@ -24,6 +27,7 @@ const AdminPanel = () => {
     <View style={{paddingTop:70}}>
     <GradientButton onPress={navigateToAddGame} title='Add Games'/>   
     <GradientButton onPress={navigateToStartGame} title='Start/End Games'/>   
+    <GradientButton onPress={navigateToAddAdmin} title='Add Admin'/>   
     </View>
     </ScreenConatainer>
     </ScrollView>

@@ -1,28 +1,72 @@
 import { useState, useEffect, useMemo } from "react";
 
-export const useFilters = (nfts, filter) => {
+export const useFilters = (nfts, languageFilter, catgFilter) => {
+
   const [filteredNfts, setfilteredNfts] = useState([]);
 
-  const isToFilter = (attributes) => {
-    const data = attributes?.find((trait) => {
-      const { value } = trait;
-      return filter.includes(value);
-    });
+  const filterByLanguage = () => {
 
-    return data ? true : false;
-  };
+    if (languageFilter == 'All Languages') {
+      return
+    }
+    const filtlang = []
+    filteredNfts.map((nft) => {
+      nft?.attributes?.map((trait) => {
+        const { value, trait_type } = trait;
 
-  useEffect(() => {
-    if (filter.length == 1) {
-      setfilteredNfts(nfts);
-      return;
+        if (trait_type == 'language') {
+          if ((value?.toLowerCase()) == languageFilter) {
+            filtlang.push(nft)
+          }
+        }
+      });
+    })
+    setfilteredNfts(filtlang)
+  }
+
+  const filterByCatg = () => {
+    if (catgFilter == 'All Category') {
+      setfilteredNfts(nfts)
+      return
+    }
+    const fltrcat = []
+    nfts?.map((nft) => {
+      nft?.attributes?.map((trait) => {
+        const { value, trait_type } = trait;
+
+        if ((value?.toLowerCase()) == catgFilter) {
+          console.log(value, catgFilter)
+          fltrcat.push(nft)
+        }
+
+      });
+    })
+    
+    if (languageFilter == 'All Languages') {
+      setfilteredNfts(fltrcat)
+      return
     }
 
-    const filtered = nfts.filter((nft) => {
-      const { attributes } = nft;
-      return isToFilter(attributes) == true;
-    });
-    setfilteredNfts(filtered);
-  }, [filter, nfts]);
+    const filtlang = []
+    fltrcat?.map((nft) => {
+      nft?.attributes?.map((trait) => {
+        const { value, trait_type } = trait;
+
+        if (trait_type == 'language') {
+          if ((value?.toLowerCase()) == languageFilter) {
+            filtlang.push(nft)
+          }
+        }
+      });
+    })
+    setfilteredNfts(filtlang)
+  }
+
+  useEffect(() => {
+    filterByCatg()
+    filterByLanguage()
+  }, [nfts, catgFilter,languageFilter])
+
+
   return useMemo(() => filteredNfts, [filteredNfts]);
 };

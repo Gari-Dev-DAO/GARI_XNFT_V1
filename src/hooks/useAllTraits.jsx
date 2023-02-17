@@ -1,11 +1,11 @@
 import { useState, useEffect, useMemo } from "react";
 
-export const useAlltraits = (nfts) => {
+export const useAlltraits = (nfts=[]) => {
   const [traits, settraits] = useState([]);
   const [languages,setLanguages]=useState([])
 
   const addTraits = (traits, nft,languages) => {
-    nft?.attributes.map((trait) => {
+    nft?.attributes?.map((trait) => {
       const { value ,trait_type} = trait;
   
       if(trait_type=='language')

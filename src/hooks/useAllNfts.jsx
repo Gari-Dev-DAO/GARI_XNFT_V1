@@ -23,5 +23,5 @@ export const useAllNfts = () => {
     getNfts();
   }, []);
 
-  return useMemo(() => nfts, [nfts]);
+  return useMemo(() =>nfts, [nfts]);
 };
