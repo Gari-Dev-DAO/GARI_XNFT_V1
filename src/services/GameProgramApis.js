@@ -43,3 +43,8 @@ catch(err)
 
 
 
+//TODO
+//Error Handling in Games
+//Loading in Games
+//Integration with Progrram
+//adding video player

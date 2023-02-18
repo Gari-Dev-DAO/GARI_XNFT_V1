@@ -16,14 +16,14 @@ const LanguageFilter = ({languages=[],setLanguageFilter}) => {
   }
 
    return (
-    <View style={{position:'absolute',zIndex:1000,top:150}}>
+    <View >
     <View >
     <Pressable onPress={()=>setIsToggle(!isToggle)} style={styles.filterBox}>
-    <Text style={{width:'85%',color:'white',fontSize:18}}>{selectedLanguage}</Text>
+    <Text style={{width:'85%',color:'white',fontSize:16}}>{selectedLanguage}</Text>
     <Text style={{width:'15%',color:'white'}}>
     { isToggle?
-    <AntDesign name="caretup" size={20} color="white" /> :
-    <AntDesign name="caretdown" size={20} color="white" />}
+    <AntDesign name="caretup" size={16} color="white" /> :
+    <AntDesign name="caretdown" size={16} color="white" />}
     </Text>
    </Pressable>
     </View>
@@ -31,14 +31,14 @@ const LanguageFilter = ({languages=[],setLanguageFilter}) => {
     <View style={isToggle?{display:'none'}:{display:'flex',backgroundColor:'rgb(23,24,26)',color:'white',padding:10,gap:5,width:150,borderRadius:5}}>
    
       <Pressable onPress={()=>filterLanguage('All Languages')}>
-      <PrimaryText style={{fontSize:18}}>
+      <PrimaryText style={{fontSize:16}}>
         {'All Languages'}
        </PrimaryText>
         </Pressable>
       {
       languages?.map((language,index)=>{
           return  <Pressable onPress={()=>filterLanguage(language)} key={index}>
-            <PrimaryText style={{fontSize:18}}>
+            <PrimaryText style={{fontSize:16}}>
             {language}
             </PrimaryText>
             </Pressable>
@@ -55,7 +55,7 @@ const styles=StyleSheet.create({
        flexDirection:'row',
        alignItems:'center',
        justifyContent:'center',
-       width:170,
+       width:150,
        borderWidth:1.5,
        borderColor:'white',
        paddingLeft:7,

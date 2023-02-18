@@ -3,8 +3,7 @@ import { RecoilRoot } from "recoil";
 import { NavigationContainer } from "@react-navigation/native";
 import { RootSiblingParent } from 'react-native-root-siblings';
 import MainTabNav from "./navigations/MainTabNav";
-import LanguageFilter from "./components/vNFT/LanguageFilter";
-import CategoryFilter from "./components/vNFT/CategoryFilter";
+
 function App() {
   return (
     <RecoilRoot>

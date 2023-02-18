@@ -4,26 +4,7 @@ export const useFilters = (nfts, languageFilter, catgFilter) => {
 
   const [filteredNfts, setfilteredNfts] = useState([]);
 
-  const filterByLanguage = () => {
-
-    if (languageFilter == 'All Languages') {
-      return
-    }
-    const filtlang = []
-    filteredNfts.map((nft) => {
-      nft?.attributes?.map((trait) => {
-        const { value, trait_type } = trait;
-
-        if (trait_type == 'language') {
-          if ((value?.toLowerCase()) == languageFilter) {
-            filtlang.push(nft)
-          }
-        }
-      });
-    })
-    setfilteredNfts(filtlang)
-  }
-
+  
   const filterByCatg = () => {
     if (catgFilter == 'All Category') {
       setfilteredNfts(nfts)
@@ -64,7 +45,6 @@ export const useFilters = (nfts, languageFilter, catgFilter) => {
 
   useEffect(() => {
     filterByCatg()
-    filterByLanguage()
   }, [nfts, catgFilter,languageFilter])
 
 
