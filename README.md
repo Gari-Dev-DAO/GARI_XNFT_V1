@@ -1,6 +1,18 @@
-# xnft-quickstart
+# Gaming-Xnft
 
-Quickstart repo for building your own xNFT.
+## Home
+![Screenshot (67)](https://user-images.githubusercontent.com/118275688/219864965-af0ada92-1bde-4116-a086-bae4664cd1d5.png)
+
+
+
+
+
+
+
+
+
+
+
 
 ## Developing
 
