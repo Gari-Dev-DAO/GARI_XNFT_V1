@@ -1,16 +1,16 @@
 # Gaming-Xnft
 
 ## Home
-![Screenshot (67)](https://user-images.githubusercontent.com/118275688/219864965-af0ada92-1bde-4116-a086-bae4664cd1d5.png)
 
 In this screen video Nfts from nft.chingari.io are shown. User Can play and watch these short videos in the form of nfts to have fun. User Can filter out the videos based on their interest and language preference. Intially there be no any filter applied.
 user can click on detail button to see video-nft Onchain information.
+![Screenshot (67)](https://user-images.githubusercontent.com/118275688/219864965-af0ada92-1bde-4116-a086-bae4664cd1d5.png)
 
 ##NFT
 
-![Screenshot (69)](https://user-images.githubusercontent.com/118275688/219865320-a26dd532-027e-45c1-9840-ac5258037035.png)
-
 this screen will show Onchain details about the video-nft. User can see the nft details on solana-explorer and arweave.
+
+![Screenshot (69)](https://user-images.githubusercontent.com/118275688/219865320-a26dd532-027e-45c1-9840-ac5258037035.png)
 
 ![Screenshot (74)](https://user-images.githubusercontent.com/118275688/219865436-059002a0-8de3-4f99-9639-96a2a048ea9b.png)
 
@@ -24,9 +24,11 @@ Each Game exists for the duration of 24 hours and after this duration top 3 winn
 
 ![Screenshot (81)](https://user-images.githubusercontent.com/118275688/219866387-924c8e11-ffaa-48a5-b17f-216072cd512c.png)
 
-![Screenshot (78)](https://user-images.githubusercontent.com/118275688/219866207-92c450a3-2011-4ced-b562-e3a057e08daf.png)
+![Screenshot (79)](https://user-images.githubusercontent.com/118275688/219866250-d1431847-d70a-4f41-959f-16040c102c7e.png)
 
 ![Screenshot (80)](https://user-images.githubusercontent.com/118275688/219866457-a0d49661-226e-4ab9-9fec-4e7fd1df386c.png)
+
+![Screenshot (78)](https://user-images.githubusercontent.com/118275688/219866207-92c450a3-2011-4ced-b562-e3a057e08daf.png)
 
 ![Screenshot (79)](https://user-images.githubusercontent.com/118275688/219866250-d1431847-d70a-4f41-959f-16040c102c7e.png)
 
