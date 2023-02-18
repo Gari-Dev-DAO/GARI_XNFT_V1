@@ -47,9 +47,6 @@ Each Game exists for the duration of 24 hours and after this duration top 3 winn
 
 
 
-![Screenshot (79)](https://user-images.githubusercontent.com/118275688/219866250-d1431847-d70a-4f41-959f-16040c102c7e.png)
-
-
 
 ![Screenshot (77)](https://user-images.githubusercontent.com/118275688/219866482-cdbc6a19-4e97-45be-ae76-8f285a789e5c.png)
 
