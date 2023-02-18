@@ -3,6 +3,7 @@ import { RecoilRoot } from "recoil";
 import { NavigationContainer } from "@react-navigation/native";
 import { RootSiblingParent } from 'react-native-root-siblings';
 import MainTabNav from "./navigations/MainTabNav";
+import Poc from "./screens/POC";
 
 function App() {
   return (

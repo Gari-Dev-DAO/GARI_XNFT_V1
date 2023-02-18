@@ -96,3 +96,56 @@ export const getAllAdmins=async()=>{
        return Error
     }
 }
+
+
+export const getGame=async({gameID,gameInstanceID})=>{
+    try{
+        const params = new URLSearchParams({
+            gameID,
+            gameInstanceID
+        })
+        const res=await axios.get(`${url}/getGame?${params}`)
+        return res.data;
+    }
+    catch(err)
+    {
+       return Error
+    }
+}
+
+export const startNewGame=async({gameID,gamePda})=>{
+    try{
+        const res=await axios.post(`${url}/startNewGame`,{gameID,gamePda})
+        return res.data
+    }
+    catch(err)
+    {
+       return Error
+    }
+}
+
+export const endGame=async({gameID,gameInstanceID})=>{
+    try{
+        const res=await axios.patch(`${url}/endGame`,{gameID,gameInstanceID})
+        return res.data
+    }
+    catch(err)
+    {
+       return Error
+    }
+}
+
+export const getAllPlayersScore=async({gameID,gameInstanceID})=>{
+    try{
+        const params = new URLSearchParams({
+            gameID,
+            gameInstanceID
+        })
+        const res=await axios.get(`${url}/getAllPlayers?${params}`)
+        return res.data;
+    }
+    catch(err)
+    {
+      return Error
+    }
+}

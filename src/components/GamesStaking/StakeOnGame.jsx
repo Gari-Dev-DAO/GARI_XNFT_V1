@@ -3,7 +3,7 @@ import Toast from 'react-native-root-toast';
 import PrimaryText from '../Typology/PrimaryText'
 import { BetOnTheGame } from '../../services/GameProgramApis'
 import SecondaryText from '../Typology/SecondaryText'
-import { addPlayer } from '../../services/GameDBApis'
+import { addPlayer, getGame } from '../../services/GameDBApis'
 import { usePublicKey } from '../../hooks/xnftConnection/hooks'
 import { getLiveGame } from '../../services/GameDBApis'
 import GameBtn from '../gradients/GameBtn'
@@ -12,22 +12,35 @@ import GameBtn from '../gradients/GameBtn'
 const StakeonGame = ({ setIsBetted, setLoading, gameID }) => {
 
   const publicKey = usePublicKey()
-  
 
   const BetToken = async () => {
     setLoading(true)
     if (publicKey) {
+      const gameInstanceID = await getLiveGame({ gameID })
+      if(!gameInstanceID || gameInstanceID=='error')
+      {
+        Toast.show('Something get Wrong!!.', {
+          duration: Toast.durations.LONG,
+          backgroundColor: 'red'
+        });
+        setLoading(false)
+        return
+      }
+      const game=await getGame({gameID,gameInstanceID})
+
+      if(!game || game=='error')
+      {
+        Toast.show('Something get Wrong!!.', {
+          duration: Toast.durations.LONG,
+          backgroundColor: 'red'
+        });
+        setLoading(false)
+        return
+      }
+
       const status = await BetOnTheGame() //on chain betting
+      
       if (status == 'success') {
-        const gameInstanceID = await getLiveGame({ gameID })
-        if (gameInstanceID == 'error') {
-          Toast.show('Something get Wrong!!.', {
-            duration: Toast.durations.LONG,
-            backgroundColor: 'red'
-          });
-          setLoading(false)
-          return
-        }
         const player = await addPlayer({ publicKey, gameID, gameInstanceID }) //send data to db
         if (player && player != 'error')
           setIsBetted(true)
