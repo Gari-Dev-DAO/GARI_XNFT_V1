@@ -27,7 +27,7 @@ In Play for free user can play games without any betting but their scores will n
 Each Game exists for the duration of 24 hours and after this duration top 3 winners from each game are taken out and get 40% , 30% ,20% Sol of the total amount Betted on that game, rest 10% is transffered to Game-Admin Account. Amount destribution is done with the help pf onchain program to make transparency.
 
 
-![Screenshot (71)](https://user-images.githubusercontent.com/118275688/219866347-5649034c-b37d-46ca-b5d1-0b823a2a4cf5.png)
+![Screenshot (82)](https://user-images.githubusercontent.com/118275688/219868186-7624fc8d-29e9-4897-ba0e-83a5d1bcb2be.png)
 
 
 
