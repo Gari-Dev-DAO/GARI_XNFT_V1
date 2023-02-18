@@ -2,7 +2,7 @@
 
 ## Home
 
-In this screen video Nfts from nft.chingari.io are shown. User Can play and watch these short videos in the form of nfts to have fun. User Can filter out the videos based on their interest and language preference. Intially there be no any filter applied.
+In this screen video Nfts from [nft.chinagri.io]() are shown. User Can play and watch these short videos in the form of nfts to have fun. User Can filter out the videos based on their interest and language preference. Intially there be no any filter applied.
 user can click on detail button to see video-nft Onchain information.
 
 
