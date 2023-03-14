@@ -41,7 +41,7 @@ const Home = () => {
            <AllNfts nfts={nfts} />
         }
            </ScrollView>
-          : <ActivityIndicator style={{ position: 'absolute', top: 100, margin: 'auto', left: '45%' }} size='large' color='#FFFFFF' />}
+          : <ActivityIndicator style={{ position: 'absolute', top: 100, margin: 'auto', left: '47%' }} size='large' color='#FFFFFF' />}
       </ScreenConatainer>
     </ScrollView>
   );

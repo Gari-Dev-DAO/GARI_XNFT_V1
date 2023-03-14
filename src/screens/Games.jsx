@@ -39,7 +39,7 @@ const Games = () => {
       contentContainerStyle={{minHeight:Dimensions.get('screen').height }}
     >
     <ScreenConatainer>
-   {isLoading? <ActivityIndicator style={{position:'absolute',top:100,margin:'auto',left:'45%'}} size='large' color='#FFFFFF'/>:
+   {isLoading? <ActivityIndicator style={{position:'absolute',top:100,margin:'auto',left:'48%'}} size='large' color='#FFFFFF'/>:
     <SafeAreaView style={{flex:1,alignItems:"center"}}>
     <PrimaryText style={{fontSize:26,fontWeight:800,lineHeight:70}}>Games</PrimaryText>
       <FlatList data={games} renderItem={renderGames} keyExtractor={item => item.gameUrl} contentContainerStyle={{display:"flex",flexDirection:"row",justifyContent:"space-around",flexWrap:"wrap"}}/>

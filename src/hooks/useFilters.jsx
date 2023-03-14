@@ -6,11 +6,15 @@ export const useFilters = (nfts, languageFilter, catgFilter) => {
 
   
   const filterByCatg = () => {
+    let fltrcat = []
+
     if (catgFilter == 'All Category') {
-      setfilteredNfts(nfts)
-      return
+     
+      fltrcat=nfts
+     
     }
-    const fltrcat = []
+    else{
+   
     nfts?.map((nft) => {
       nft?.attributes?.map((trait) => {
         const { value, trait_type } = trait;
@@ -22,7 +26,7 @@ export const useFilters = (nfts, languageFilter, catgFilter) => {
 
       });
     })
-    
+  }
     if (languageFilter == 'All Languages') {
       setfilteredNfts(fltrcat)
       return

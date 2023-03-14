@@ -1,9 +1,9 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "npx xnft native start",
+    "start": "npx xnft native start ",
     "build": "expo export:web",
-    "dev": "expo start --web & npx xnft dev --iframe http://localhost:9933",
+    "dev": "expo start --web  & npx xnft dev --port 19006",
     "test": "jest"
   },
   "jest": {

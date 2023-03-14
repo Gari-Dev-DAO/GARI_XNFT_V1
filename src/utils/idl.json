@@ -1,50 +1,201 @@
- {
-    "version": "0.1.0",
-    "name": "crowdfunding",
-    "instructions": [
-      {
-        "name": "create",
-        "accounts": [
-          { "name": "campaign", "isMut": true, "isSigner": false },
-          { "name": "user", "isMut": true, "isSigner": true },
-          { "name": "systemProgram", "isMut": false, "isSigner": false }
-        ],
-        "args": [
-          { "name": "name", "type": "string" },
-          { "name": "description", "type": "string" }
-        ]
-      },
-      {
-        "name": "withdraw",
-        "accounts": [
-          { "name": "campaign", "isMut": true, "isSigner": false },
-          { "name": "user", "isMut": true, "isSigner": true }
-        ],
-        "args": [{ "name": "amount", "type": "u64" }]
-      },
-      {
-        "name": "donate",
-        "accounts": [
-          { "name": "campaign", "isMut": true, "isSigner": false },
-          { "name": "user", "isMut": true, "isSigner": true },
-          { "name": "systemProgram", "isMut": false, "isSigner": false }
-        ],
-        "args": [{ "name": "amount", "type": "u64" }]
-      }
-    ],
-    "accounts": [
-      {
-        "name": "Campaign",
-        "type": {
-          "kind": "struct",
-          "fields": [
-            { "name": "admin", "type": "publicKey" },
-            { "name": "name", "type": "string" },
-            { "name": "description", "type": "string" },
-            { "name": "amountDonated", "type": "u64" }
-          ]
+{
+  "version": "0.1.0",
+  "name": "bettinggame",
+  "instructions": [
+    {
+      "name": "create",
+      "accounts": [
+        {
+          "name": "count",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "campaign",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
         }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "initializeCounter",
+      "accounts": [
+        {
+          "name": "counter",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "signer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdraw",
+      "accounts": [
+        {
+          "name": "campaign",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "pay",
+      "accounts": [
+        {
+          "name": "campaign",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "pda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "winner",
+      "accounts": [
+        {
+          "name": "campaign",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "user",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "pda",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "winnerOne",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "winnerTwo",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "winnerThree",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "admin",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Campaign",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "publicKey"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "amountReceived",
+            "type": "u64"
+          }
+        ]
       }
-    ]
+    },
+    {
+      "name": "Counter",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "count",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "address": "4X13GHMj9WN5DQHKPeRG534EJvSGo8RsQYNsYzsk9iXj"
   }
-  
+}

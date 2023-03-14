@@ -69,7 +69,6 @@ config.module.rules[1].oneOf.push(r)
   config.resolve.alias['../Utilities/Platform'] =
     'react-native-web/dist/exports/Platform'
    
-
     
   return config;
 

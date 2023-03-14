@@ -69,6 +69,7 @@ const GameStaking = ({ route }) => {
       contentContainerStyle={{ minHeight: Dimensions.get('screen').height }}
     >
       <ScreenConatainer>
+        <PrimaryText>Thanks For Playing Game.</PrimaryText>
         {isLoading && <Loading />}
       { !isOverLayVisible && !Loading && <PrimaryText style={{ margin: 'auto', fontSize: 22, fontWeight: 800 }}>Thanks For Playing The Game</PrimaryText> }
         <OverLay visible={isOverLayVisible && !isBetted && !isLoading} setVisible={setOverLayVisible}><StakeonGame setIsBetted={setIsBetted} setLoading={setLoading} gameID={gameID} /> </OverLay>

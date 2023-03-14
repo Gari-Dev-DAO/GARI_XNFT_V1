@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text, Image } from 'react-native'
 import Toast from 'react-native-root-toast';
 import PrimaryText from '../Typology/PrimaryText'
-import { BetOnTheGame } from '../../services/GameProgramApis'
+import { betOnGame } from '../../services/GameProgramApis';
 import SecondaryText from '../Typology/SecondaryText'
 import { addPlayer, getGame } from '../../services/GameDBApis'
 import { usePublicKey } from '../../hooks/xnftConnection/hooks'
@@ -38,10 +38,11 @@ const StakeonGame = ({ setIsBetted, setLoading, gameID }) => {
         return
       }
 
-      const status = await BetOnTheGame() //on chain betting
+      const status = await betOnGame({gamePda:game.gamePda}) //on chain betting
       
       if (status == 'success') {
         const player = await addPlayer({ publicKey, gameID, gameInstanceID }) //send data to db
+        console.log(player)
         if (player && player != 'error')
           setIsBetted(true)
         else {

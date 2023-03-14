@@ -35,3 +35,6 @@ const AdminPanel = () => {
 }
 
 export default AdminPanel
+
+
+// "dev": "expo start --web & npx xnft dev --iframe http://localhost:9933",

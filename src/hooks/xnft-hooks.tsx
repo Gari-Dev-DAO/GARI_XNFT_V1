@@ -16,8 +16,8 @@ export { useColorScheme } from "react-native";
 export function usePublicKey(): PublicKey {
   const [publicKey, setPublicKey] = useState(window.xnft.solana?.publicKey);
   useEffect(() => {
-    window.xnft.solana?.on("publicKeyUpdate", () => {
-      setPublicKey(window.xnft.solana.publicKey);
+    window?.xnft?.solana?.on("publicKeyUpdate", () => {
+      setPublicKey(window?.xnft?.solana?.publicKey);
     });
   }, [setPublicKey]);
   return publicKey;

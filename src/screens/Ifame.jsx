@@ -21,7 +21,7 @@ const Iframe = ({ route }) => {
       {isLoading &&
      
       <ScreenConatainer>
-      <ActivityIndicator style={{ position: 'absolute', top: 100, margin: 'auto', left: '45%' }} size='large' color='#FFFFFF' />
+      <ActivityIndicator style={{ position: 'absolute', top: 100, margin: 'auto', left: '48%' }} size='large' color='#FFFFFF' />
       </ScreenConatainer>
       }
       <iframe src={url} style={{...{height:'100%',width:'100%'},...show}}  onLoad={hideSpinner}

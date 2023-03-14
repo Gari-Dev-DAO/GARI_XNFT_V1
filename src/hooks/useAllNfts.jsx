@@ -12,7 +12,7 @@ export const useAllNfts = () => {
     const getNfts = async() => {
       let nfts = mintAddresses?.map(async (mintAddress) => {
          const metaData= await getNFTMetadata(mintAddress)
-         const {metadataUri}=metaData?.metaplex
+         const {metadataUri}=metaData?.metaplex||{}
          let arweaveData= await getArweaveData(metadataUri)
          arweaveData={...arweaveData,mintAddress,metadataUri}
          return arweaveData;

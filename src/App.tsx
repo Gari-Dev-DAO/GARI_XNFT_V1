@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { RootSiblingParent } from 'react-native-root-siblings';
 import MainTabNav from "./navigations/MainTabNav";
 import Poc from "./screens/POC";
+import GameStackNav from "./navigations/GamesStackNav";
 
 function App() {
   return (
