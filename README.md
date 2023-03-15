@@ -33,6 +33,26 @@ For each game top 3 winner will be selected and will be rewarded 40%,30%,20% of 
 ![Screenshot (77)](https://user-images.githubusercontent.com/118275688/225212591-ab2ffa21-ee8a-409e-8963-5bd22bb4ad02.png)
 
 
+## Admin Screen
+Admin can add new admins to the platform. He can also add new games to the platform and start new games  after rewarding exsisting game winners after game duration.
+Admin Screen will be only shown to the admins of xNft.
+
+![Screenshot (73)](https://user-images.githubusercontent.com/118275688/225213456-b7af5609-ad24-4de3-b496-8a246bab95ee.png)
+
+![Screenshot (70)](https://user-images.githubusercontent.com/118275688/225213511-d525089a-a38d-4fc6-84d1-b5e7f7dfe228.png)
+
+![Screenshot (71)](https://user-images.githubusercontent.com/118275688/225213573-4987324d-ede6-4ddc-bc8c-fad1f8df6ad5.png)
+
+![Screenshot (72)](https://user-images.githubusercontent.com/118275688/225213633-ae37d699-af94-459c-8982-a2f357c8c330.png)
+
+## Steps to Use the Gari Zone
+1) Download xnft from [Gari Zone](https://www.xnft.gg/app/96tNoZR5t1tWBRxaRfQ6jWF1PzgRdXC9M7ETzUQnPFXa) .
+2) Choose rpc connection to be devnet in backpack under preferences section.
+3) Fund some faucets to the walltet from [sol faucets](https://solfaucet.com/).
+4) Make Fun.
+
+
+
 
 
 ## Developing
