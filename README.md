@@ -1,7 +1,7 @@
 # GariZone
 
 ##Home Screen
-Here video Nfts from nft@cgingari.io are shown. User can watch those videos for fun. Filter based on the language and category is provided to ensure users to watch videos/nfts based on their interest.
+Here video Nfts from [](https://nft.chingari.io/) are shown. User can watch those videos for fun. Filter based on the language and category is provided to ensure users to watch videos/nfts based on their interest.
 
 
 ![Screenshot (67)](https://user-images.githubusercontent.com/118275688/225210342-e5c91998-56a1-4334-ae5a-b540b4e59da4.png)
