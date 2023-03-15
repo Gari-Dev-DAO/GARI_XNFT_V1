@@ -1,7 +1,7 @@
 # GariZone
 
 ## Home Screen
-Here video Nfts from [nft.chingari.io](https://nft.chingari.io/) are shown. User can watch those videos for fun. Filter based on the language and category is provided to ensure users to watch videos/nfts based on their interest.
+Here video Nfts from [nft.chingari.io](https://nft.chingari.io/) are shown. User can watch those videos for fun. Filter based on the language and category is provided to ensure users can watch videos/nfts based on their interest.
 
 
 ![Screenshot (67)](https://user-images.githubusercontent.com/118275688/225210342-e5c91998-56a1-4334-ae5a-b540b4e59da4.png)
@@ -9,7 +9,7 @@ Here video Nfts from [nft.chingari.io](https://nft.chingari.io/) are shown. User
 ![Screenshot (68)](https://user-images.githubusercontent.com/118275688/225210405-3d9bc52c-6b97-4193-a135-c6a79cbff32f.png)
 
 ## NFT Screen
-All the onchain data of a particular vNft is shown there. User can verify that data on arweave and solana explorer.
+All the onchain data of a particular vNft is shown there when user clicks details button in Home Screen corresponding to that vNft. User Have option to see that on-chain data on arweave and solana explorer.
 
 ![Screenshot (69)](https://user-images.githubusercontent.com/118275688/225210787-d3ff3ed9-666e-4f10-9120-c24afc3da940.png)
 
@@ -17,10 +17,10 @@ All the onchain data of a particular vNft is shown there. User can verify that d
 
 
 ## Game Screen
-Here Users can play the games. Each game have two options- Play For Free and Play To Earn. If User select Play For Free option than he can play the game any number of time to make fun but his score will not be reflected in leaderboard and he can not earn any reward.
+Here Users can play the games for fun. Each game have two options- Play For Free and Play To Earn. If User select Play For Free option than he can play the game any number of times to make fun but his score will not be reflected in leaderboard and he will not earn any reward.
 On the other hand if user select Play To Earn option than he will have to bet 0.2.SOL on the onchain solana program where Game PDA will store the betting amount.
-once betted he can play game atmost 3 times while the game duration (24 hours). Out of all the 3 scores best score will be taken out for the leaderboard.
-For each game top 3 winner will be selected and will be rewarded 40%,30%,20% of the total amount betted respectively rest 10% will be transferred to game-admin.
+once betted he can play game atmost 3 times while the game duration (24 hours). Out of all the 3 scores, best score will be taken out for the leaderboard.
+For each game top 3 winner will be selected and will be rewarded 40%,30%,20% of the total amount betted respectively rest 10% will be transferred to game-admin after the game duration (24 hours).
 
 ![Screenshot (82)](https://user-images.githubusercontent.com/118275688/225212257-4ce377c8-de5c-4516-ba15-d0917c94c9f1.png)
 
