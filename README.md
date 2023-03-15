@@ -1,14 +1,14 @@
 # GariZone
 
-##Home Screen
-Here video Nfts from [](https://nft.chingari.io/) are shown. User can watch those videos for fun. Filter based on the language and category is provided to ensure users to watch videos/nfts based on their interest.
+## Home Screen
+Here video Nfts from [nft.chingari.io](https://nft.chingari.io/) are shown. User can watch those videos for fun. Filter based on the language and category is provided to ensure users to watch videos/nfts based on their interest.
 
 
 ![Screenshot (67)](https://user-images.githubusercontent.com/118275688/225210342-e5c91998-56a1-4334-ae5a-b540b4e59da4.png)
 
 ![Screenshot (68)](https://user-images.githubusercontent.com/118275688/225210405-3d9bc52c-6b97-4193-a135-c6a79cbff32f.png)
 
-##NFT Screen
+## NFT Screen
 All the onchain data of a particular vNft is shown there. User can verify that data on arweave and solana explorer.
 
 ![Screenshot (69)](https://user-images.githubusercontent.com/118275688/225210787-d3ff3ed9-666e-4f10-9120-c24afc3da940.png)
@@ -16,7 +16,7 @@ All the onchain data of a particular vNft is shown there. User can verify that d
 ![Screenshot (74)](https://user-images.githubusercontent.com/118275688/225210879-c392bc7c-dffb-4c8f-a5fa-2bb7879329b0.png)
 
 
-##Game Screen
+## Game Screen
 Here Users can play the games. Each game have two options- Play For Free and Play To Earn. If User select Play For Free option than he can play the game any number of time to make fun but his score will not be reflected in leaderboard and he can not earn any reward.
 On the other hand if user select Play To Earn option than he will have to bet 0.2.SOL on the onchain solana program where Game PDA will store the betting amount.
 once betted he can play game atmost 3 times while the game duration (24 hours). Out of all the 3 scores best score will be taken out for the leaderboard.
