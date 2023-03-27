@@ -1,7 +1,7 @@
 # GariZone
 
 ## Home Screen
-Here video Nfts from [nft.chingari.io](https://nft.chingari.io/) are shown. Users can watch those videos for fun. Filter based on the language and category is provided to ensure users can watch videos/nfts based on their interest.
+Here video Nfts from [nft.chingari.io](https://nft.chingari.io/) are shown. Users can watch those videos for fun. Filter based on the language and category is provided to ensure users can watch videos/nfts based on their interests.
 
 
 ![Screenshot (67)](https://user-images.githubusercontent.com/118275688/225210342-e5c91998-56a1-4334-ae5a-b540b4e59da4.png)
@@ -9,7 +9,7 @@ Here video Nfts from [nft.chingari.io](https://nft.chingari.io/) are shown. User
 ![Screenshot (68)](https://user-images.githubusercontent.com/118275688/225210405-3d9bc52c-6b97-4193-a135-c6a79cbff32f.png)
 
 ## NFT Screen
-All the onchain data of a particular vNft is shown there when the user clicks the details button in the Home Screen corresponding to that vNft. User have the option to see that on-chain data on arweave and solana explorer.
+All the on-chain data of a particular vNft is shown there when the user clicks the details button in the Home Screen corresponding to that vNft. User have the option to see that on-chain data on arweave and Solana explorer.
 
 ![Screenshot (69)](https://user-images.githubusercontent.com/118275688/225210787-d3ff3ed9-666e-4f10-9120-c24afc3da940.png)
 
@@ -17,10 +17,10 @@ All the onchain data of a particular vNft is shown there when the user clicks th
 
 
 ## Game Screen
-Here Users can play the games for fun. Each game has two options- Play For Free and Play To Earn. If User selects the Play For Free option then he can play the game any number of times to make fun but his score will not be reflected in the leaderboard and he will not earn any reward.
-On the other hand if the user selects the Play To Earn option then he will have to bet 0.2.SOL on the onchain solana program where Game PDA will store the betting amount.
+Here Users can play the games for fun. Each game has two options- Play For Free and Play To Earn. If the user selects the Play For Free option then he can play the game any number of times to make fun but his score will not be reflected in the leaderboard and he will not earn any reward.
+On the other hand, if the user selects the Play To Earn option then he will have to bet 0.2.SOL on the on-chain Solana program where Game PDA will store the betting amount.
 once betted he can play the game at most 3 times during the game duration (24 hours). Out of all the 3 scores, the best score will be taken out for the leaderboard.
-For each game top 3 winners will be selected and will be rewarded 40%,30%,20% of the total amount betted respectively and the rest 10% will be transferred to game-admin after the game duration (24 hours).
+For each game top 3 winners will be selected and will be rewarded 40%,30% and 20% of the total amount betted respectively and the rest 10% will be transferred to game-admin after the game duration (24 hours).
 
 ![Screenshot (82)](https://user-images.githubusercontent.com/118275688/225212257-4ce377c8-de5c-4516-ba15-d0917c94c9f1.png)
 
@@ -34,7 +34,7 @@ For each game top 3 winners will be selected and will be rewarded 40%,30%,20% of
 
 
 ## Admin Screen
-Admin can add new admins to the platform. He can also add new games to the platform and start new games  after rewarding existing game winners after game duration.
+Admin can add new admins to the platform. He can also add new games to the platform and start new games  after rewarding existing game winners after the games duration.
 Admin Screen will be only shown to the admins of xNft.
 
 ![Screenshot (73)](https://user-images.githubusercontent.com/118275688/225213456-b7af5609-ad24-4de3-b496-8a246bab95ee.png)
@@ -46,9 +46,9 @@ Admin Screen will be only shown to the admins of xNft.
 ![Screenshot (72)](https://user-images.githubusercontent.com/118275688/225213633-ae37d699-af94-459c-8982-a2f357c8c330.png)
 
 ## Steps to Use the Gari Zone
-1) Download xnft from [Gari Zone](https://www.xnft.gg/app/96tNoZR5t1tWBRxaRfQ6jWF1PzgRdXC9M7ETzUQnPFXa) .
-2) Choose rpc connection to be devnet in backpack under preferences section.
-3) Fund some faucets to the wallet from [sol faucets](https://solfaucet.com/).
+1) Download xnft from [Gari Zone](https://www.xnft.gg/app/96tNoZR5t1tWBRxaRfQ6jWF1PzgRdXC9M7ETzUQnPFXa).
+2) Choose rpc connection to be devnet in the backpack under the preferences section.
+3) Fund some faucets to the wallet from the [sol faucets](https://solfaucet.com/).
 4) Make Fun.
 
 
